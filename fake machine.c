@@ -39,5 +39,6 @@ write(C, memory, 1^(read(A, memory) & read(B, memory)));
 write(address2, memory ,read(address1, memory));
 if (read(program_buffer_flip, memory)){*program_counter = *program_counter_buffer; write(program_buffer_flip, memory, 0);}}
 printf("A %d, B %d, C %d, HALT %d, program counter %b, program counter buffer %b\n", read(A,memory), read(B,memory), read(C,memory), read(HALT,memory), *program_counter, *program_counter_buffer);
+free memory;
 return 0; 
 }
